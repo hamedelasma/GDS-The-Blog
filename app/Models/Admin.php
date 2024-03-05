@@ -38,4 +38,9 @@ class Admin extends Authenticatable implements JWTSubject
             'name' => $this->name
         ];
     }
+
+    public function blog()
+    {
+        return $this->hasMany(Blog::class);
+    }
 }
